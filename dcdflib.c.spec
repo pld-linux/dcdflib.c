@@ -4,7 +4,7 @@ Name:		dcdflib.c
 Version:	1.1
 Release:	1
 # partially public domain, but ACM implementations are non-commercial
-License:	non-commercial
+License:	non-commercial distribution and use
 Group:		Libraries
 Source0:	ftp://odin.mda.uth.tmc.edu/pub/source/%{name}-%{version}.tar.gz
 BuildRequires:	libtool
