@@ -57,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}}
 
 cd src
-libtool --mode=link install libcdflib.la $RPM_BUILD_ROOT%{_libdir}
+libtool --mode=install install libcdflib.la $RPM_BUILD_ROOT%{_libdir}
 install cdflib.h $RPM_BUILD_ROOT%{_includedir}
 
 %clean
