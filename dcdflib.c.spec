@@ -7,6 +7,7 @@ Release:	1
 License:	non-commercial distribution and use
 Group:		Libraries
 Source0:	ftp://odin.mda.uth.tmc.edu/pub/source/%{name}-%{version}.tar.gz
+# Source0-md5:	6e31235713c284b77809e10dd4c7c56b
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
