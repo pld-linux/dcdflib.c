@@ -2,7 +2,7 @@ Summary:	Library of C Routines for Cumulative Distribution Functions, Inverses e
 Summary(pl):	Biblioteka funkcji C do dystrybuant, odwrotno¶ci i innych parametrów
 Name:		dcdflib.c
 Version:	1.1
-Release:	1
+Release:	2
 # partially public domain, but ACM implementations are non-commercial
 License:	non-commercial distribution and use
 Group:		Libraries
@@ -47,9 +47,9 @@ Biblioteka statyczna DCDFLIB.C.
 
 %build
 cd src
-libtool %{__cc} %{rpmcflags} -c ipmpar.c
-libtool %{__cc} %{rpmcflags} -c dcdflib.c
-libtool %{__cc} %{rpmldflags} -o libcdflib.la -rpath %{_libdir} \
+libtool --mode=compile %{__cc} %{rpmcflags} -c ipmpar.c
+libtool --mode=compile %{__cc} %{rpmcflags} -c dcdflib.c
+libtool --mode=link %{__cc} %{rpmldflags} -o libcdflib.la -rpath %{_libdir} \
 	ipmpar.lo dcdflib.lo
 
 %install
@@ -57,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}}
 
 cd src
-libtool install libcdflib.la $RPM_BUILD_ROOT%{_libdir}
+libtool --mode=link install libcdflib.la $RPM_BUILD_ROOT%{_libdir}
 install cdflib.h $RPM_BUILD_ROOT%{_includedir}
 
 %clean
