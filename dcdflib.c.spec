@@ -22,7 +22,7 @@ Biblioteka funkcji C do dystrybuant, odwrotno¶ci i innych parametrów.
 Summary:	DCDFLIB.C header files
 Summary(pl):	Pliki nag³ówkowe DCDFLIB.C
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 DCDFLIB.C header files.
@@ -34,7 +34,7 @@ Pliki nag³ówkowe DCDFLIB.C.
 Summary:	DCDFLIB.C static library
 Summary(pl):	Biblioteka statyczna DCDFLIB.C
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 DCDFLIB.C static library.
