@@ -1,5 +1,5 @@
 Summary:	Library of C Routines for Cumulative Distribution Functions, Inverses etc.
-Summary(pl):	Biblioteka funkcji C do dystrybuant, odwrotno禼i i innych parametr體
+Summary(pl.UTF-8):   Biblioteka funkcji C do dystrybuant, odwrotno艣ci i innych parametr贸w
 Name:		dcdflib.c
 Version:	1.1
 Release:	2
@@ -15,31 +15,31 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Library of C Routines for Cumulative Distribution Functions, Inverses
 and Other Parameters.
 
-%description -l pl
-Biblioteka funkcji C do dystrybuant, odwrotno禼i i innych parametr體.
+%description -l pl.UTF-8
+Biblioteka funkcji C do dystrybuant, odwrotno艣ci i innych parametr贸w.
 
 %package devel
 Summary:	DCDFLIB.C header files
-Summary(pl):	Pliki nag丑wkowe DCDFLIB.C
+Summary(pl.UTF-8):   Pliki nag艂贸wkowe DCDFLIB.C
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 DCDFLIB.C header files.
 
-%description devel -l pl
-Pliki nag丑wkowe DCDFLIB.C.
+%description devel -l pl.UTF-8
+Pliki nag艂贸wkowe DCDFLIB.C.
 
 %package static
 Summary:	DCDFLIB.C static library
-Summary(pl):	Biblioteka statyczna DCDFLIB.C
+Summary(pl.UTF-8):   Biblioteka statyczna DCDFLIB.C
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 DCDFLIB.C static library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka statyczna DCDFLIB.C.
 
 %prep
