@@ -2,7 +2,7 @@ Summary:	Library of C Routines for Cumulative Distribution Functions, Inverses e
 Summary(pl.UTF-8):	Biblioteka funkcji C do dystrybuant, odwrotności i innych parametrów
 Name:		dcdflib.c
 Version:	1.1
-Release:	2
+Release:	3
 # partially public domain, but ACM implementations are non-commercial
 License:	non-commercial distribution and use
 Group:		Libraries
