@@ -47,9 +47,9 @@ Biblioteka statyczna DCDFLIB.C.
 
 %build
 cd src
-libtool --mode=compile %{__cc} %{rpmcflags} -c ipmpar.c
-libtool --mode=compile %{__cc} %{rpmcflags} -c dcdflib.c
-libtool --mode=link %{__cc} %{rpmldflags} -o libcdflib.la -rpath %{_libdir} \
+libtool --mode=compile %{__cc} %{rpmcflags} %{rpmcppflags} -c ipmpar.c
+libtool --mode=compile %{__cc} %{rpmcflags} %{rpmcppflags} -c dcdflib.c
+libtool --mode=link %{__cc} %{rpmldflags} %{rpmcflags} -o libcdflib.la -rpath %{_libdir} \
 	ipmpar.lo dcdflib.lo -lm
 
 %install
@@ -69,16 +69,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc HOWTOGET README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
-%attr(755,root,root) %ghost %{_libdir}/lib*.so.0
+%attr(755,root,root) %{_libdir}/libcdflib.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libcdflib.so.0
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/*
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/*.h
+%attr(755,root,root) %{_libdir}/libcdflib.so
+%{_libdir}/libcdflib.la
+%{_includedir}/cdflib.h
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libcdflib.a
